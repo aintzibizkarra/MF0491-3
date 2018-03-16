@@ -12,8 +12,9 @@
     </div>
   </div>
   <div class="col-md-3">
+    <app-productos></app-productos>
     <span class="glyphicon glyphicon-shopping-cart carrito">
-        <a href="#" class="btn btn-lg" role="button">carro</a>
+    <a href="#" class="btn btn-lg" role="button">carro</a>
     </span>
   </div>
 </div><!--Fin del buscador -->
@@ -23,10 +24,10 @@
    <!-- Para ver si salen bien los productos{{productos|json}}-->
   <div class="row productos">
     <a *ngFor='let producto of productos | filter : searchText '>
-      <div class="col-sm-6 col-md-4">
+      <div class="col-xs-6 col-md-4">
         <div class="thumbnail">
           <span class="badge" *ngIf="producto.oferta">{{producto.precioOfertado}}&#37;</span> <!--badge con oferta -->
-          <img src="{{producto.foto}}" alt="{{producto.foto}}">
+          <img src="{{producto.foto}}" alt="{{producto.foto}}" class="imagenProducto">
           <div class="caption">
             <p class="precio">
               <span class="precioOfertado" *ngIf = "producto.oferta"> {{producto.precio-((producto.precioOfertado*producto.precio/100)) | round}}&euro;</span>
@@ -40,11 +41,7 @@
         </div>
       </div>
     </a>
-  </div>
-  
-    
-
-
+  </div><!--Fin detalle-->
 </div>
 
 

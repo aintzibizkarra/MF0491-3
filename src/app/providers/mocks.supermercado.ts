@@ -90,15 +90,6 @@ export class MOCK_SUPERMERCADO {
             "precioOfertado": 0,
             "cantidad": 6,
             "precioUnitario":"11.15€/kl"
-        },
-         {
-            "nombre": "Crema corporal NIVEA, lata 250 ml",
-            "precio": 3.33,
-            "foto": "https://www.compraonline.grupoeroski.com/images/447128.jpg",
-            "oferta": true,
-            "precioOfertado": 20,
-            "cantidad": 4,
-            "precioUnitario": "1.33€/ml"
         }
 
     ]`;
