@@ -8,6 +8,7 @@ export class Supermercado{
     foto : string;
     oferta : boolean;
     cantidad : number;
+    precioOfertado : number;
 
     constructor(){
         this. nombre = '';
@@ -16,5 +17,6 @@ export class Supermercado{
         this.foto = 'assets/img/productos_default.jpg';
         this.oferta = false;
         this.cantidad = 0;
+        this.precioOfertado = 0;
     }
 }
