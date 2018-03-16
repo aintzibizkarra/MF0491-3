@@ -4,7 +4,10 @@
     <span class="titulo">Supermercado</span>
   </div>
   <div class="col-md-6">
-    <input type="text" class="form-control buscador" placeholder="Busca tu producto por nombre" >
+    <div class="input-group">
+        <input type="text" class="form-control buscador" placeholder="Busca tu producto por nombre" [(ngModel)]="searchText">
+    </div>
+    
     
   </div>
   <div class="col-md-3">
@@ -17,7 +20,7 @@
 <div class="container">
     {{productos|json}}
   <div class="row productos">
-    <a *ngFor='let producto of productos'>
+    <a *ngFor='let producto of productos | filter : searchText '>
       <div class="col-sm-6 col-md-4">
         <div class="thumbnail">
           <span class="badge">42</span> <!--badge con oferta -->
