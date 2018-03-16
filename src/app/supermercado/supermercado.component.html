@@ -33,7 +33,7 @@
             <p class="precioUnit">({{producto.precioUnitario}})</p>
             <p>{{producto.nombre}}</p>
             <div class="cantidad">
-               <p><span class="glyphicon glyphicon-minus" (click)="restarCantidad()"></span> <input type="text" size="5"><span class="glyphicon glyphicon-plus" (click)="sumarCantidad()"></span></p>
+               <p><output><span class="glyphicon glyphicon-minus" (click)="restarCantidad()"></span> {{producto.cantidad}}<span class="glyphicon glyphicon-plus" (click)="sumarCantidad()"></span></output></p>
               <p><a href="#" class="btn btn-lg" role="button">Añadir al carro</a></p>
             </div>
           </div>

@@ -10,6 +10,7 @@ import { ProductosService } from '../providers/productos.service';
 export class SupermercadoComponent implements OnInit {
   
   productos : Supermercado[];
+  cantidadComprar:number;
 
   constructor(public productosService : ProductosService) { 
     console.log('SupermercadoComponent constructor');
@@ -23,11 +24,15 @@ export class SupermercadoComponent implements OnInit {
   }
 
   sumarCantidad(){
+   console.log("sumarCantidad");
+   
 
   }
 
   restarCantidad(){
-    
+    console.log("restarCantidad");
+
+
   }
 
 }
