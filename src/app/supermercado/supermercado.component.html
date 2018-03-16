@@ -1,17 +1,53 @@
-<div class="container">
-  <div class="header">
-      <div class="row " id="buscadorProductos">
-        <div class="col-md-4">
-            <span>Supermercado</span>
-        </div>
-        
-        <input type="text" class="form-control buscador" placeholder="Busca tu producto por nombre" >
-        <button type="button" class="btn btn-lg btn-success" disabled="disabled">carrito</button>
-    
-      </div>
+<!--Buscador -->
+<div class="row " id="buscadorProductos">
+  <div class="col-md-3">
+    <span class="titulo">Supermercado</span>
   </div>
+  <div class="col-md-6">
+    <input type="text" class="form-control buscador" placeholder="Busca tu producto por nombre" >
+    
+  </div>
+  <div class="col-md-3">
+    <span class="glyphicon glyphicon-shopping-cart carrito">
+        <a href="#" class="btn btn-lg" role="button">carro</a>
+    </span>
+  </div>
+</div>
+<!-- Detalle de los productos-->
+<div class="container">
+    {{productos|json}}
+  <div class="row productos">
+    <a *ngFor='let producto of productos'>
+      <div class="col-sm-6 col-md-4">
+        <div class="thumbnail">
+          <span class="badge">42</span> <!--badge con oferta -->
+          <img src="{{producto.foto}}" alt="{{producto.foto}}">
+          <div class="caption">
+            <p class="precio">
+              <span> {{producto.precio-(producto.precioOfertado*producto.precio)}}&euro;</span>
+              &nbsp;{{producto.precio}} &euro;
+            </p>
+            <p></p>
+            <p class="precioUnit">({{producto.precioUnitario}})</p>
+            <p>{{producto.nombre}}</p>
+            
+            <p></p>
+            <p><a href="#" class="btn btn-lg" role="button">Añadir al carro</a></p>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+  
+    
+
+
+</div>
+
+
+  
   
  
 
 
-</div>
+

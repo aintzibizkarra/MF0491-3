@@ -1,14 +1,54 @@
-header{
-    
-}
 #buscadorProductos{
-    background-color: #242424;
+    background-color: #242424;  
+    //float: right;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    .titulo{
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.250em;
+        float: right;   
+    }
+    .boton{
+        float: right;
+        background-color:#88CC88;
+        color: white;
+        text-align: center;
+        padding:15px;
+        
+        .carrito{
+            color: white;
+        }
+    }
     .buscador{
-        width: 25%;
         float: right;
-        height: 50%;
+       
     }
-    .btn{
-        float: right;
-    }
+}
+.productos{
+    display: inline-block;
+}
+
+.precioUnit{
+    color: grey;
+   
+}
+.precio{
+    font-size: 1.5em;
+    color:#957F7F;
+}
+.btn{
+    background-color:#88CC88;
+    color: #fff;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+   
 }
