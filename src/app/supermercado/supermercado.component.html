@@ -1,40 +1,40 @@
 <!--Buscador -->
 <div class="row " id="buscadorProductos">
-  <div class="col-md-3">
+  <div class="col-md-2">
     <span class="titulo">Supermercado</span>
   </div>
-  <div class="col-md-6">
+  <div class="col-md-7">
     <div class="input-group">
-        <input type="text" class="form-control buscador" placeholder="Busca tu producto por nombre" [(ngModel)]="searchText">
+      <div class="input-group">
+        <input type="text" class="form-control"  size="250" placeholder="Busca tu producto por nombre" [(ngModel)]="searchText">
+        <span class="input-group-addon glyphicon glyphicon-search"></span>
+      </div>
     </div>
-    
-    
   </div>
   <div class="col-md-3">
     <span class="glyphicon glyphicon-shopping-cart carrito">
         <a href="#" class="btn btn-lg" role="button">carro</a>
     </span>
   </div>
-</div>
+</div><!--Fin del buscador -->
+
 <!-- Detalle de los productos-->
 <div class="container">
-    {{productos|json}}
+   <!-- Para ver si salen bien los productos{{productos|json}}-->
   <div class="row productos">
     <a *ngFor='let producto of productos | filter : searchText '>
       <div class="col-sm-6 col-md-4">
         <div class="thumbnail">
-          <span class="badge">42</span> <!--badge con oferta -->
+          <span class="badge" *ngIf="producto.oferta">{{producto.precioOfertado}}&#37;</span> <!--badge con oferta -->
           <img src="{{producto.foto}}" alt="{{producto.foto}}">
           <div class="caption">
             <p class="precio">
-              <span> {{producto.precio-(producto.precioOfertado*producto.precio)}}&euro;</span>
-              &nbsp;{{producto.precio}} &euro;
+              <span class="precioOfertado" *ngIf = "producto.oferta"> {{producto.precio-((producto.precioOfertado*producto.precio/100)) | round}}&euro;</span>
+               &nbsp;{{producto.precio}} &euro;
             </p>
-            <p></p>
             <p class="precioUnit">({{producto.precioUnitario}})</p>
             <p>{{producto.nombre}}</p>
-            
-            <p></p>
+            <p> <input type="number"></p>
             <p><a href="#" class="btn btn-lg" role="button">Añadir al carro</a></p>
           </div>
         </div>

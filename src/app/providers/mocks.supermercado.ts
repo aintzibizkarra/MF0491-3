@@ -6,7 +6,7 @@ export class MOCK_SUPERMERCADO {
             "precio": 1.90,
             "foto": "https://www.compraonline.grupoeroski.com/images/8456345.jpg",
             "oferta": true,
-            "precioOfertado": 0.20,
+            "precioOfertado": 25,
             "cantidad": 2,
             "precioUnitario": "3.79€/Kgr"
         },
@@ -24,7 +24,7 @@ export class MOCK_SUPERMERCADO {
             "precio": 6.14,
             "foto": "https://www.compraonline.grupoeroski.com/images/17985870.jpg",
             "oferta": true,
-            "precioOfertado": 0.15,
+            "precioOfertado": 5,
             "cantidad": 3,
             "precioUnitario": "6.14€/L"
         },
@@ -42,7 +42,7 @@ export class MOCK_SUPERMERCADO {
             "precio": 1.20,
             "foto": "https://www.compraonline.grupoeroski.com/images/16203382.jpg",
             "oferta": true,
-            "precioOfertado": 0.20,
+            "precioOfertado":15,
             "cantidad": 4,
             "precioUnitario": "1.20€/kg"
         },
@@ -78,7 +78,7 @@ export class MOCK_SUPERMERCADO {
             "precio": 3.33,
             "foto": "https://www.compraonline.grupoeroski.com/images/447128.jpg",
             "oferta": true,
-            "precioOfertado": 0.20,
+            "precioOfertado": 10,
             "cantidad": 4,
             "precioUnitario": "1.33€/ml"
         },
@@ -90,6 +90,15 @@ export class MOCK_SUPERMERCADO {
             "precioOfertado": 0,
             "cantidad": 6,
             "precioUnitario":"11.15€/kl"
+        },
+         {
+            "nombre": "Crema corporal NIVEA, lata 250 ml",
+            "precio": 3.33,
+            "foto": "https://www.compraonline.grupoeroski.com/images/447128.jpg",
+            "oferta": true,
+            "precioOfertado": 20,
+            "cantidad": 4,
+            "precioUnitario": "1.33€/ml"
         }
 
     ]`;
