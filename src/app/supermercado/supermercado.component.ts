@@ -10,7 +10,7 @@ import { ProductosService } from '../providers/productos.service';
 export class SupermercadoComponent implements OnInit {
   
   productos : Supermercado[];
-  
+
   constructor(public productosService : ProductosService) { 
     console.log('SupermercadoComponent constructor');
 
@@ -20,6 +20,14 @@ export class SupermercadoComponent implements OnInit {
     console.log('SupermercadoComponent ngOnInit');
     this.productos = this.productosService.getProductos();
     //this.recetaSelec = this.recetas[0] || new Receta ('Anonimo');
+  }
+
+  sumarCantidad(){
+
+  }
+
+  restarCantidad(){
+    
   }
 
 }
