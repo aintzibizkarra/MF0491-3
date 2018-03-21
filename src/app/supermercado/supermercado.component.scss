@@ -74,11 +74,18 @@
     display: inline;
     
 }
-input{
-    border-radius:25%; 
-}
-.cantidad{
-    position: relative;
-    margin-left: 65px;
-    margin-right: 65px;
+.sumarRestarCantidad{
+   border-radius: 30px;
+   width: 125px;
+   padding: 15px;
+   margin: 25px;
+   text-align: center;
+   background-color: rgba(119, 118, 118,0.5);
+       
+    .botonCantidad{
+        border: none;
+        background:  rgba(119, 118, 118,0.1);
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 }

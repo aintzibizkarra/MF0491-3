@@ -5,10 +5,8 @@
   </div>
   <div class="col-md-7">
     <div class="input-group">
-      <div class="input-group">
-        <input type="text" class="form-control"  size="250" placeholder="Busca tu producto por nombre" [(ngModel)]="searchText">
-        <span class="input-group-addon glyphicon glyphicon-search"></span>
-      </div>
+      <input type="text" class="form-control"  size="250" placeholder="Busca tu producto por nombre" [(ngModel)]="searchText">
+      <span class="input-group-addon glyphicon glyphicon-search"></span>
     </div>
   </div>
   <div class="col-md-3">
@@ -32,7 +30,12 @@
             </p>
             <p class="precioUnit">({{producto.precioUnitario}})</p>
             <p>{{producto.nombre}}</p>
-            <p><output><span class="glyphicon glyphicon-minus" (click)="restarCantidad()"></span> {{producto.cantidad}}<span class="glyphicon glyphicon-plus" (click)="sumarCantidad()"></span></output></p>
+            <div class="sumarRestarCantidad">
+              <button class="botonCantidad" (click)="restarCantidad()">-</button>
+              {{producto.cantidad}}
+              <button class="botonCantidad" (click)="sumarCantidad()">+</button>
+            </div>
+            
             <p><a href="#" class="btn btn-lg" role="button">Añadir al carro</a></p>
           </div>
         </div>
